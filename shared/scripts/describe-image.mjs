@@ -2,11 +2,7 @@
  * Describe an image using the Claude vision API.
  *
  * Usage:
- *   node shared/scripts/describe-image.mjs <path-to-image> [--model <model-id>]
- *
- * Examples:
- *   node shared/scripts/describe-image.mjs photo.jpg
- *   node shared/scripts/describe-image.mjs photo.jpg --model claude-opus-4-7
+ *   node shared/scripts/describe-image.mjs <path-to-image>
  *
  * Environment:
  *   ANTHROPIC_API_KEY - Required
@@ -24,13 +20,10 @@ const SUPPORTED_TYPES = {
   ".webp": "image/webp",
 };
 
-const args = process.argv.slice(2);
-const modelFlagIndex = args.indexOf("--model");
-const model = modelFlagIndex !== -1 ? args[modelFlagIndex + 1] : "claude-sonnet-4-6";
-const imagePath = args.find((a) => !a.startsWith("--") && args[args.indexOf(a) - 1] !== "--model");
+const imagePath = process.argv[2];
 
 if (!imagePath) {
-  console.error("Usage: node shared/scripts/describe-image.mjs <path-to-image> [--model <model-id>]");
+  console.error("Usage: node shared/scripts/describe-image.mjs <path-to-image>");
   process.exit(1);
 }
 
@@ -52,7 +45,7 @@ const imageData = fs.readFileSync(imagePath).toString("base64");
 const client = new Anthropic();
 
 const response = await client.messages.create({
-  model,
+  model: "claude-sonnet-4-6",
   max_tokens: 1024,
   messages: [
     {
