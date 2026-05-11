@@ -22,7 +22,7 @@ const SKILLS_DIR = path.join(REPO_ROOT, "skills");
 const STATE_FILE = path.join(REPO_ROOT, ".github", "state", "last-sync.json");
 
 // Model selection: Sonnet 4 for balanced cost/performance
-const MODEL = "claude-sonnet-4-20250514";
+const MODEL = "claude-sonnet-4-6";
 
 /**
  * Load JSON file safely
