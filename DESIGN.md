@@ -42,7 +42,7 @@ Every touchpoint should feel celebratory, inviting, and a little bit wondrous.
 
 | Role | Pantone | Hex (approx.) | Usage |
 |---|---|---|---|
-| Dark Wine | 7421 C | `#672146` | Supporting accents, depth |
+| Positive Red | 7421 C | `#b50e1f` | Supporting accents, depth |
 | Powder Blue | 2975 C | `#C7E8F3` | Light backgrounds, vapor cloud fields |
 | Sky Blue | 297 C | `#71C5E8` | Gradients, tint layers, hover states |
 
@@ -264,7 +264,7 @@ Script font:    Luna Bar Regular (sparingly, short phrases)
 Primary red:    #9B1B30  (Pantone 7621 C)
 Primary blue:   #009CDE  (Pantone 299 C)
 Navy:           #2D2F92  (Pantone 2746 C)
-Dark wine:      #672146  (Pantone 7421 C)
+Positive red:   #b50e1f  (Pantone 7421 C)
 Powder blue:    #C7E8F3  (Pantone 2975 C)
 Sky blue:       #71C5E8  (Pantone 297 C)
 
